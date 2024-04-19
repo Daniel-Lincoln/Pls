@@ -8,14 +8,16 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
-  build: {
-    rollupOptions: {
-      external: ['swiper']
-    }
-  }
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   }
 })
+export default {
+  build: {
+    rollupOptions: {
+      external: ['swiper']
+    }
+  }
+}
